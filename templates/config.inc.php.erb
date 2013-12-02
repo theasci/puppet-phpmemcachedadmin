@@ -1,0 +1,56 @@
+<?php
+/**
+ * phpMyAdmin configuration file, you can use it as base for the manual
+ * configuration. For easier setup you can use "setup/".
+ *
+ * All directives are explained in Documentation.html and on phpMyAdmin
+ * wiki <http://wiki.phpmyadmin.net>.
+ */
+
+/*
+ * This is needed for cookie based authentication to encrypt password in
+ * cookie
+ */
+$cfg['blowfish_secret'] = ''; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
+
+/**
+ * Server(s) configuration
+ */
+$i = 0;
+
+// The $cfg['Servers'] array starts with $cfg['Servers'][1].  Do not use
+// $cfg['Servers'][0]. You can disable a server config entry by setting host
+// to ''. If you want more than one server, just copy following section
+// (including $i incrementation) serveral times. There is no need to define
+// full server array, just define values you need to change.
+$i++;
+<% @options.sort.map do |k,v| -%>
+<% if v.is_a?(Hash) -%>
+<% @options[k].sort.map do |ki, vi| -%>
+<% if vi == true -%>
+<%= ki %>
+<% elsif vi and vi != '' -%>
+$cfg['<%= k %>'][$i]['<%= ki %>'] = <%= vi %>
+<% elsif vi -%>
+<%= ki %>
+<% end -%>
+<% end -%>
+
+<% end -%>
+<% end -%>
+/*
+ * End of servers configuration
+ */
+
+/*
+ * Directories for saving/loading files from server
+ */
+$cfg['UploadDir'] = '/var/lib/phpMyAdmin/upload';
+$cfg['SaveDir']   = '/var/lib/phpMyAdmin/save';
+
+/*
+ * Disable the default warning that is displayed on the DB Details Structure
+ * page if any of the required Tables for the relation features is not found
+ */
+$cfg['PmaNoRelation_DisableWarning'] = TRUE;
+?>
