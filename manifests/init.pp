@@ -16,9 +16,9 @@ class phpmyadmin (
     ensure  => file,
     owner   => 'root',
     group   => 'root',
-    mode    => '0600',
+    mode    => '0644',
     content => template('phpmyadmin/config.inc.php.erb'),
-    require => [ Package['phpmyadmin'], ],
+    require => [ Package['phpMyAdmin'], ],
   }
 
 }
