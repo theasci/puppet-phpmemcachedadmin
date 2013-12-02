@@ -1,4 +1,4 @@
-name 'paull-moduleplate'
+name 'paull-phpmyadmin'
 version ''
 source ''
 author ''

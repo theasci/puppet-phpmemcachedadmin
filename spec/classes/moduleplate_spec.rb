@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'moduleplate', :type => :class do
+describe 'phpmyadmin', :type => :class do
 
     context "RedHat architecture" do
         let :facts do

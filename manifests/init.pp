@@ -1,3 +1,3 @@
-class moduleplate {
+class phpmyadmin {
 
 }
