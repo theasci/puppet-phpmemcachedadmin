@@ -1,3 +1,5 @@
-class moduleplate {
+class moduleplate (
+    
+  ) inherits moduleplate::params {
 
 }
