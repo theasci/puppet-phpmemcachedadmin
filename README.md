@@ -1,4 +1,4 @@
-#  moduleplate
+# puppet-moduleplate
 
 #### Table of Contents
 
