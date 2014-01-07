@@ -10,12 +10,12 @@ describe 'phpmyadmin', :type => :class do
     end
 
     it { should contain_package('phpMyAdmin').with(
-      'name' => 'phpmyadmin'
+      'name' => 'phpMyAdmin'
       )
     }
 
     context "default host" do
-      it { should contain_file("/etc/phpMyAdmin/config.inc.php").with_content %r{^\$cfg\['Servers'\]\[\$i\]\['host'\] = localhost} }            
+      it { should contain_file("/etc/phpMyAdmin/config.inc.php").with_content %r{^\$cfg\['Servers'\]\[\$i\]\['host'\] = \'localhost\'} }            
     end
 
   end
