@@ -9,6 +9,8 @@ describe 'phpmyadmin', :type => :class do
       }
     end
 
+    it { should compile }
+
     it { should contain_package('phpMyAdmin').with(
       'name' => 'phpMyAdmin'
       )
