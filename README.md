@@ -1,4 +1,4 @@
-# puppet-phpmyadmin
+# puppet-phpmemcachedadmin
 
 #### Table of Contents
 

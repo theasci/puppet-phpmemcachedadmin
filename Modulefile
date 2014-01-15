@@ -1,4 +1,4 @@
-name 'paull-phpmyadmin'
+name 'paull-phpmemcachedadmin'
 version ''
 source ''
 author ''

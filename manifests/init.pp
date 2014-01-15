@@ -1,24 +1,24 @@
-class phpmyadmin (
-    $package_name     = $phpmyadmin::params::package_name,
-    $config_dir       = $phpmyadmin::params::config_dir,
+class phpmemcachedadmin (
+    $package_name     = $phpmemcachedadmin::params::package_name,
+    $config_dir       = $phpmemcachedadmin::params::config_dir,
     $override_options = {},
-  ) inherits phpmyadmin::params {
+  ) inherits phpmemcachedadmin::params {
 
-  package { 'phpMyAdmin':
+  package { 'phpMemcachedAdmin':
     ensure => installed,
     name   => $package_name,
   }
   
   # Create a merged together set of options.  Rightmost hashes win over left.
-  $options = phpmyadmin_deepmerge($phpmyadmin::params::default_options, $filtered_options)
+  $options = phpmemcachedadmin_deepmerge($phpmemcachedadmin::params::default_options, $filtered_options)
 
-  file { "${config_dir}/config.inc.php":
+  file { "${config_dir}/Memcache.php":
     ensure  => file,
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
-    content => template('phpmyadmin/config.inc.php.erb'),
-    require => [ Package['phpMyAdmin'], ],
+    content => template('phpmemcachedadmin/Memcache.php.erb'),
+    require => [ Package['phpMemcachedAdmin'], ],
   }
 
 }
