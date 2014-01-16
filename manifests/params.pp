@@ -10,6 +10,12 @@ class phpmemcachedadmin::params {
     }
   }
 
+  $clusters = {
+    'Default' => {
+      '127.0.0.1:11211' => [ '127.0.0.1', '11211' ],
+    },
+  }
+
   $default_options = {
     'Default' => {
       'host' => 'localhost',

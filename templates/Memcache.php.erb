@@ -14,15 +14,18 @@ return array (
   'hit_rate_alert' => '90',
   'eviction_alert' => '0',
   'file_path' => '/var/lib/phpMemcachedAdmin/Temp/',
-  'servers' =>
-  array (
-    'Default' =>
-    array (
-      '127.0.0.1:11211' =>
-      array (
-        'hostname' => '127.0.0.1',
-        'port' => '11211',
+  'servers' => array (
+<% @clusters.sort.map do |k,v| -%>
+<% if v.is_a?(Hash) -%>
+    '<%= k %>' => array (
+<% @clusters[k].sort.map do |ki, vi| -%>
+      '<%= ki %>' => array (
+        'hostname' => '<%= vi[0] %>',
+        'port'     => '<%= vi[1] %>',
       ),
+<% end -%>
     ),
+<% end -%>
+<% end -%>
   ),
 );
