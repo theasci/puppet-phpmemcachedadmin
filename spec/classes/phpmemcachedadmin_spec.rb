@@ -9,16 +9,14 @@ describe 'phpmemcachedadmin', :type => :class do
       }
     end
 
-    it { should compile }
-
     it { should contain_package('phpMemcachedAdmin').with(
       'name' => 'phpMemcachedAdmin'
       )
     }
 
-    context "default host" do
-      it { should contain_file("/etc/phpMemcachedAdmin/Memcache.php") }            
-    end
+    it do
+     should contain_file("/etc/phpMemcachedAdmin/Memcache.php").with_content(/'hostname' => '127\.0\.0\.1',/)
+   end
 
   end
  end
