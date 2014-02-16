@@ -5,7 +5,8 @@ describe 'moduleplate', :type => :class do
     context "RedHat architecture" do
         let :facts do
             {
-                :osfamily     => 'RedHat',
+                :osfamily               => 'RedHat',
+                :operatingsystemrelease => '6',
             }
         end
 
@@ -14,7 +15,8 @@ describe 'moduleplate', :type => :class do
      context "Debian architecture" do
         let :facts do
             {
-                :osfamily     => 'Debian',
+                :osfamily               => 'Debian',
+                :operatingsystemrelease => '6',
             }
         end
 
