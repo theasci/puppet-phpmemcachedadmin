@@ -1,5 +1,7 @@
 # puppet-moduleplate
 
+[![Build Status](https://travis-ci.org/paul91/puppet-moduleplate.png?branch=master)](https://travis-ci.org/paul91/puppet-moduleplate)
+
 #### Table of Contents
 
 1. [Overview](#overview)
