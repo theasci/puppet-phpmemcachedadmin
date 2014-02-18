@@ -9,7 +9,6 @@ class phpmemcachedadmin::vhost (
     group   => 'root',
     mode    => '0644',
     content => template('phpmemcachedadmin/phpMemcachedAdmin.conf.erb'),
-    notify  => Service['httpd'],
     require => Package['httpd'],
   }
 

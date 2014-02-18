@@ -15,17 +15,22 @@ return array (
   'eviction_alert' => '0',
   'file_path' => '/var/lib/phpMemcachedAdmin/Temp/',
   'servers' => array (
-<% @clusters.sort.map do |k,v| -%>
-<% if v.is_a?(Hash) -%>
+<%
+@clusters.select { |k, v| v.is_a?(Hash) }.sort.each do |k,v|
+-%>
     '<%= k %>' => array (
-<% @clusters[k].sort.map do |ki, vi| -%>
+<%
+  v.select { |ki, vi| vi.is_a?(Hash) }.sort.each do |ki, vi|
+-%>
       '<%= ki %>' => array (
-        'hostname' => '<%= vi[0] %>',
-        'port'     => '<%= vi[1] %>',
+<%
+    vi.select { |kii, vii| vii and vii != '' }.sort.each do |kii, vii|
+-%>
+        '<%= kii %>' => '<%= vii %>',
+<% end -%>
       ),
 <% end -%>
     ),
-<% end -%>
 <% end -%>
   ),
 );

@@ -16,7 +16,6 @@ class phpmemcachedadmin (
     mode    => '0644',
     content => template('phpmemcachedadmin/Memcache.php.erb'),
     require => [ Package['phpMemcachedAdmin'], Package['httpd'], ],
-    notify  => Service['httpd'],
   }
 
 }
