@@ -13,7 +13,7 @@ class phpmemcachedadmin::params {
   $clusters = {
     'Default' => {
       '127.0.0.1:11211' => {
-        'host' => '127.0.0.1',
+        'hostname' => '127.0.0.1',
         'port' => '11211',
       },
     },
