@@ -6,7 +6,7 @@ describe 'phpmemcachedadmin::vhost', :type => :class do
         let :facts do
             {
                 :osfamily               => 'RedHat',
-                :operatingsystemrelease => '6',
+                :operatingsystemrelease => '6'
             }
         end
 
@@ -26,7 +26,7 @@ describe 'phpmemcachedadmin::vhost', :type => :class do
         let :facts do
             {
                 :osfamily               => 'Debian',
-                :operatingsystemrelease => '6',
+                :operatingsystemrelease => '6'
             }
         end
 

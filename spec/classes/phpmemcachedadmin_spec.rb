@@ -6,13 +6,13 @@ describe 'phpmemcachedadmin', :type => :class do
         let :facts do
             {
                 :osfamily               => 'RedHat',
-                :operatingsystemrelease => '6',
+                :operatingsystemrelease => '6'
             }
         end
 
         it { should contain_package('phpMemcachedAdmin').with(
             'ensure' => 'installed',
-            'name'   => 'phpMemcachedAdmin',
+            'name'   => 'phpMemcachedAdmin'
           )
         }
 
@@ -32,7 +32,7 @@ describe 'phpmemcachedadmin', :type => :class do
         let :facts do
             {
                 :osfamily               => 'Debian',
-                :operatingsystemrelease => '6',
+                :operatingsystemrelease => '6'
             }
         end
 
