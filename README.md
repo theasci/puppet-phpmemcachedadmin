@@ -1,6 +1,6 @@
 # puppet-phpmemcachedadmin
 
-[![Build Status](https://travis-ci.org/paul91/puppet-moduleplate.png?branch=master)](https://travis-ci.org/paul91/puppet-moduleplate)
+[![Build Status](https://travis-ci.org/paul91/puppet-phpmemcachedadmin.png?branch=master)](https://travis-ci.org/paul91/puppet-phpmemcachedadmin)
 
 #### Table of Contents
 
@@ -17,7 +17,7 @@
 
 ## Overview
 
-A one-maybe-two sentence summary of what the module does/what problem it solves. This is your 30 second elevator pitch for your module. Consider including OS/Puppet version it works with.       
+A one-maybe-two sentence summary of what the module does/what problem it solves. This is your 30 second elevator pitch for your module. Consider including OS/Puppet version it works with.
 
 ## Module Description
 
