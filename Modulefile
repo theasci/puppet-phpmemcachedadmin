@@ -1,10 +1,8 @@
 name 'paull-phpmemcachedadmin'
-version ''
-source ''
-author ''
-license ''
-summary ''
-description ''
-project_page ''
-
-## Add dependencies, if any:
+version '0.0.1'
+source 'https://github.com/paul91/puppet-phpmemcachedadmin'
+author 'Paul Lewis'
+license 'GPL'
+summary 'Puppet phpMemcachedadmin module'
+description 'Module to install PhpMemcachedAdmin using puppet.'
+project_page 'https://github.com/paul91/puppet-phpmemcachedadmin'
