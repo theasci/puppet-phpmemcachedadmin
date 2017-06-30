@@ -6,5 +6,6 @@
   "license": "GPL",
   "summary": "Puppet phpMemcachedadmin module",
   "description": "Module to install PhpMemcachedAdmin using puppet.",
+  "dependencies" : [],
   "project_page": "https://github.com/paul91/puppet-phpmemcachedadmin"
 }
